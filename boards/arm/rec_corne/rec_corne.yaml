@@ -1,6 +1,6 @@
-identifier: eyelash_corne
-name: Eyelash Corne
-url: https://github.com/a741725193/zmk-new_corne
+identifier: rec_corne
+name: Rec Corne
+url: https://github.com/segodimor2d2/zmk-config
 type: mcu
 arch: arm
 toolchain:

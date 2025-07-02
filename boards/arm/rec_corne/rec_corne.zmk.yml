@@ -1,0 +1,17 @@
+file_format: "1"
+id: rec_corne
+name: Rec Corne
+url: https://github.com/segodimor2d2/zmk-config
+type: board
+arch: arm
+features:
+  - keys
+  - display
+  - underglow
+  - encoder
+outputs:
+  - usb
+  - ble
+siblings:
+  - rec_corne_left
+  - rec_corne_right
