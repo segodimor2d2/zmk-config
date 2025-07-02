@@ -4,7 +4,6 @@
 #include <input/processors.dtsi>
 #include <zephyr/dt-bindings/input/input-event-codes.h>
 #include <behaviors.dtsi>
-#include <dt-bindings/zmk/bt.h>
 #include <dt-bindings/zmk/keys.h>
 #include <dt-bindings/zmk/outputs.h>
 #include <dt-bindings/zmk/pointing.h>
@@ -56,37 +55,31 @@
         default_layer {
             display-name = "QWERTY";
             bindings = <
-&kp ESC    &kp Q  &kp W  &kp E     &kp R  &kp T                                &mmv MOVE_UP                     &kp Y        &kp U  &kp I      &kp O    &kp P     &kp BSPC
-&kp LSHFT  &kp A  &kp S  &kp D     &kp F  &kp G                &mmv MOVE_LEFT  &mkp LCLK       &mmv MOVE_RIGHT  &kp H        &kp J  &kp K      &kp L    &kp SEMI  &kp ENTER
-&kp LCTRL  &kp Z  &kp X  &kp C     &kp V  &kp B        &trans                  &mmv MOVE_DOWN                   &kp N        &kp M  &kp COMMA  &kp DOT  &kp FSLH  &kp MINUS
-                         &kp LALT  &mo 2  &lt 4 SPACE                                                           &lt 3 ENTER  &mo 1  &kp RALT
+&kp ESC    &kp Q  &kp W  &kp E     &kp R  &kp T                                  &mmv MOVE_UP                     &kp Y        &kp U  &kp I      &kp O    &kp P     &kp BSPC
+&kp LSHFT  &kp A  &kp S  &kp D     &kp F  &kp G                  &mmv MOVE_LEFT  &mkp LCLK       &mmv MOVE_RIGHT  &kp H        &kp J  &kp K      &kp L    &kp SEMI  &kp ENTER
+&kp LCTRL  &kp Z  &kp X  &kp C     &kp V  &kp B        &trans                    &mmv MOVE_DOWN                   &kp N        &kp M  &kp COMMA  &kp DOT  &kp FSLH  &kp MINUS
+                         &kp LALT  &mo 2  &lt 4 SPACE                                                             &lt 3 ENTER  &mo 1  &kp RALT
             >;
-
-            sensor-bindings = <&inc_dec_kp C_VOLUME_UP C_VOLUME_DOWN>;
         };
 
         lower_numer {
             display-name = "NUMBER";
             bindings = <
-&trans  &trans  &trans  &kp N7  &kp N8  &kp N9                             &mmv MOVE_UP                     &trans          &trans          &trans        &trans           &trans    &kp DEL
-&trans  &trans  &trans  &kp N4  &kp N5  &kp N6             &mmv MOVE_LEFT  &mkp LCLK       &mmv MOVE_RIGHT  &mmv MOVE_LEFT  &mmv MOVE_DOWN  &mmv MOVE_UP  &mmv MOVE_RIGHT  &trans    &trans
-&trans  &trans  &trans  &kp N1  &kp N2  &kp N3   &trans                    &mmv MOVE_DOWN                   &kp LEFT_ARROW  &kp DOWN        &kp UP        &kp RIGHT        &trans    &trans
-                        &trans  &trans  &kp N0                                                              &kp INS         &td0            &trans
+&trans  &trans  &trans  &kp N7  &kp N8        &kp N9                                &msc SCRL_UP                     &trans          &trans          &trans        &trans           &msc SCRL_LEFT  &msc SCRL_RIGHT
+&trans  &trans  &trans  &kp N4  &kp N5        &kp N6                &msc SCRL_LEFT  &mkp LCLK       &msc SCRL_RIGHT  &mmv MOVE_LEFT  &mmv MOVE_DOWN  &mmv MOVE_UP  &mmv MOVE_RIGHT  &kp PG_UP       &msc SCRL_UP
+&trans  &trans  &trans  &kp N1  &kp N2        &kp N3      &trans                    &msc SCRL_DOWN                   &kp LEFT_ARROW  &kp DOWN        &kp UP        &kp RIGHT        &kp PG_DN       &msc SCRL_DOWN
+                        &trans  &kp NUMBER_0  &kp DOLLAR                                                             &trans          &td0            &kp DEL
             >;
-
-            sensor-bindings = <&scroll_encoder>;
         };
 
         raise_symbol {
             display-name = "SYMBOL";
             bindings = <
-&trans  &kp EXCL      &kp AT        &kp HASH   &kp DLLR   &kp PRCNT                            &mmv MOVE_UP                     &kp CARET  &kp AMPS   &kp ASTRK  &kp LPAR  &kp SQT   &kp BSPC
-&trans  &bt BT_CLR    &mkp LCLK     &mkp MCLK  &mkp RCLK  &mkp MB4             &mmv MOVE_LEFT  &mkp LCLK       &mmv MOVE_RIGHT  &kp MINUS  &kp EQUAL  &kp LBKT   &kp RBKT  &kp BSLH  &kp GRAVE
-&trans  &out OUT_USB  &out OUT_BLE  &none      &none      &mkp MB5   &trans                    &mmv MOVE_DOWN                   &kp UNDER  &kp PLUS   &kp LBRC   &kp RBRC  &kp PIPE  &kp TILDE
-                                    &trans     &trans     &kp SPACE                                                             &kp RET    &trans     &trans
+&trans  &trans        &trans        &trans  &trans  &trans                       &kp HASH              &kp SLASH  &kp MINUS  &kp PLUS  &kp AT     &kp LPAR          &kp BSPC
+&trans  &trans        &trans        &trans  &trans  &trans               &kp N0  &trans    &kp DOLLAR  &kp N0     &kp STAR   &kp HASH  &kp DLLR   &kp LEFT_BRACKET  &kp GRAVE
+&trans  &out OUT_USB  &out OUT_BLE  &none   &none   &trans     &trans            &kp STAR              &kp EQUAL  &trans     &kp EXCL  &kp QMARK  &kp LEFT_BRACE    &kp TILDE
+                                    &trans  &trans  &kp SPACE                                          &kp RET    &trans     &trans
             >;
-
-            sensor-bindings = <&scroll_encoder>;
         };
 
         fn_layer {
@@ -97,16 +90,14 @@
 &trans          &sys_reset  &trans     &bootloader  &trans     &mkp MB5  &kp C_MUTE                    &mmv MOVE_DOWN                   &trans       &trans     &bootloader  &sys_reset  &kp SCROLLLOCK   &kp PAUSE_BREAK
                                        &trans       &trans     &trans                                                                   &trans       &trans     &trans
             >;
-
-            sensor-bindings = <&scroll_encoder>;
         };
 
         rec_layer {
             bindings = <
-&trans  &trans  &trans  &trans     &trans     &trans                       &trans          &trans          &trans          &trans        &trans           &trans  &trans
-&trans  &trans  &trans  &mkp RCLK  &mkp LCLK  &mkp MCLK            &trans  &trans  &trans  &mmv MOVE_LEFT  &mmv MOVE_DOWN  &mmv MOVE_UP  &mmv MOVE_RIGHT  &trans  &trans
-&trans  &trans  &trans  &trans     &trans     &trans     &trans            &trans          &trans          &trans          &trans        &trans           &trans  &trans
-                        &trans     &trans     &trans                                       &trans          &trans          &trans
+&trans  &trans  &trans  &trans        &trans        &trans                        &kp C_VOL_UP          &trans          &trans          &trans        &trans           &trans  &trans
+&trans  &trans  &trans  &mkp RCLK     &mkp LCLK     &mkp MCLK             &trans  &kp K_MUTE    &trans  &mmv MOVE_LEFT  &mmv MOVE_DOWN  &mmv MOVE_UP  &mmv MOVE_RIGHT  &trans  &trans
+&trans  &trans  &trans  &kp C_VOL_DN  &kp C_VOL_UP  &kp K_MUTE  &trans            &kp C_VOL_DN          &trans          &trans          &trans        &trans           &trans  &trans
+                        &trans        &trans        &trans                                              &trans          &trans          &trans
             >;
 
             label = "REC";
