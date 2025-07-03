@@ -45,7 +45,13 @@
             compatible = "zmk,behavior-tap-dance";
             label = "BRACKET";
             #binding-cells = <0>;
-            bindings = <&kp LBKT>, <&kp RBKT>;
+            bindings = <&kp LEFT_BRACKET>, <&kp RIGHT_BRACKET>;
+        };
+        brace: brace {
+            compatible = "zmk,behavior-tap-dance";
+            label = "BRACE";
+            #binding-cells = <0>;
+            bindings = <&kp LEFT_BRACE>, <&kp RIGHT_BRACE>;
         };
     };
 
@@ -89,9 +95,9 @@
         raise_symbol {
             display-name = "SYMBOL";
             bindings = <
-&trans  &trans        &trans        &trans  &trans  &trans                       &kp HASH            &kp KP_SLASH  &kp MINUS  &kp PLUS  &kp AT     &parenthesis    &kp BSPC
-&trans  &trans        &trans        &trans  &trans  &trans               &kp N0  &trans    &kp DLLR  &kp N0        &kp STAR   &kp HASH  &kp DLLR   &bracket        &kp GRAVE
-&trans  &out OUT_USB  &out OUT_BLE  &none   &none   &trans     &trans            &kp STAR            &kp EQUAL     &kp AT     &kp EXCL  &kp QMARK  &kp LEFT_BRACE  &kp TILDE
+&trans  &trans        &trans        &trans  &trans  &trans                       &kp HASH            &kp KP_SLASH  &kp MINUS  &kp PLUS  &kp AT     &parenthesis  &kp BSPC
+&trans  &trans        &trans        &trans  &trans  &trans               &kp N0  &trans    &kp DLLR  &kp N0        &kp STAR   &kp HASH  &kp DLLR   &bracket      &kp GRAVE
+&trans  &out OUT_USB  &out OUT_BLE  &none   &none   &trans     &trans            &kp STAR            &kp EQUAL     &kp AT     &kp EXCL  &kp QMARK  &brace        &kp TILDE
                                     &trans  &trans  &kp SPACE                                        &kp RET       &trans     &trans
             >;
         };
