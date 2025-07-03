@@ -85,10 +85,10 @@
         fn_layer {
             display-name = "Fn";
             bindings = <
-&studio_unlock  &kp F1      &kp F2     &kp F3       &kp F4     &kp F5                              &mmv MOVE_UP                     &kp F6       &kp F7     &kp F8       &kp F9      &kp F10          &kp F11
-&trans          &trans      &mkp LCLK  &mkp MCLK    &mkp RCLK  &mkp MB4            &mmv MOVE_LEFT  &mkp LCLK       &mmv MOVE_RIGHT  &bootloader  &mkp LCLK  &mkp MCLK    &mkp RCLK   &kp PRINTSCREEN  &kp F12
-&trans          &sys_reset  &trans     &bootloader  &trans     &mkp MB5  &trans                    &mmv MOVE_DOWN                   &trans       &trans     &bootloader  &sys_reset  &kp SCROLLLOCK   &kp PAUSE_BREAK
-                                       &trans       &trans     &trans                                                               &trans       &trans     &trans
+&studio_unlock  &kp F1      &kp F2     &kp F3       &kp F4     &kp F5                                    &rgb_ug RGB_SAI                   &kp F6       &kp F7     &kp F8       &kp F9      &kp F10  &kp F11
+&trans          &trans      &trans     &trans       &trans     &trans            &rgb_ug RGB_COLOR_HSB   &rgb_ug RGB_TOG  &rgb_ug RGB_EFF  &bootloader  &trans     &trans       &trans      &trans   &kp F12
+&trans          &sys_reset  &trans     &bootloader  &trans     &trans  &trans                            &rgb_ug RGB_BRD                   &trans       &trans     &bootloader  &sys_reset  &trans   &trans
+                                       &trans       &trans     &trans                                                                      &trans       &trans     &trans
             >;
         };
 
