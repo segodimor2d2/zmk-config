@@ -33,6 +33,13 @@
             #binding-cells = <0>;
             bindings = <&kp LEFT_SHIFT>, <&kp CAPS>;
         };
+
+        new_behavior: new_behavior {
+            compatible = "zmk,behavior-tap-dance";
+            label = "NEW_BEHAVIOR";
+            #binding-cells = <0>;
+            bindings = <&kp LEFT_PARENTHESIS>, <&kp RIGHT_PARENTHESIS>;
+        };
     };
 
     rgb_encoder: rgb_encoder {
@@ -75,7 +82,7 @@
         raise_symbol {
             display-name = "SYMBOL";
             bindings = <
-&trans  &trans        &trans        &trans  &trans  &trans                       &kp HASH            &kp KP_SLASH  &kp MINUS  &kp PLUS  &kp AT     &sk LPAR RPAR     &kp BSPC
+&trans  &trans        &trans        &trans  &trans  &trans                       &kp HASH            &kp KP_SLASH  &kp MINUS  &kp PLUS  &kp AT     &sk LPAR          &kp BSPC
 &trans  &trans        &trans        &trans  &trans  &trans               &kp N0  &trans    &kp DLLR  &kp N0        &kp STAR   &kp HASH  &kp DLLR   &kp LEFT_BRACKET  &kp GRAVE
 &trans  &out OUT_USB  &out OUT_BLE  &none   &none   &trans     &trans            &kp STAR            &kp EQUAL     &kp AT     &kp EXCL  &kp QMARK  &kp LEFT_BRACE    &kp TILDE
                                     &trans  &trans  &kp SPACE                                        &kp RET       &trans     &trans
