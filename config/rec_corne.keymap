@@ -45,7 +45,7 @@
             compatible = "zmk,behavior-tap-dance";
             label = "BRACKET";
             #binding-cells = <0>;
-            bindings = <&kp LEFT_BRACKET>, <&sk RALT(N6)>;
+            bindings = <&kp LEFT_BRACKET>, <&sk RALT N6>;
         };
         brace: brace {
             compatible = "zmk,behavior-tap-dance";
