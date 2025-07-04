@@ -46,7 +46,7 @@
             compatible = "zmk,behavior-tap-dance";
             label = "BRACKET";
             #binding-cells = <0>;
-            bindings = <&kp RBKT>, <&kp RA(N6)>;
+            bindings = <&kp RBKT>, <&kp PIPE>;
         };
 
         brace: brace {
@@ -98,7 +98,7 @@
             display-name = "SYMBOL";
             bindings = <
 &trans        &trans  &trans  &bt BT_SEL 2  &bt BT_SEL 1  &bt BT_SEL 0                    &kp HASH            &kp KP_SLASH  &kp MINUS  &kp PLUS  &kp TILDE  &parenthesis  &kp BSPC
-&out OUT_BLE  &trans  &trans  &trans        &bt BT_SEL 4  &bt BT_SEL 3                  &kp N0  &trans    &kp DLLR  &kp N0        &kp STAR   &kp HASH  &kp DLLR   &bracket      &kp GRAVE
+&out OUT_BLE  &trans  &trans  &trans        &bt BT_SEL 4  &bt BT_SEL 3            &kp N0  &trans    &kp DLLR  &kp N0        &kp STAR   &kp HASH  &kp DLLR   &bracket      &kp GRAVE
 &out OUT_USB  &trans  &trans  &trans        &trans        &trans        &trans            &kp STAR            &kp EQUAL     &kp AT     &kp EXCL  &kp QMARK  &brace        &kp AMPS
                               &trans        &trans        &trans                                              &kp RET       &trans     &trans
             >;
