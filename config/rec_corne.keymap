@@ -46,14 +46,14 @@
             compatible = "zmk,behavior-tap-dance";
             label = "BRACKET";
             #binding-cells = <0>;
-            bindings = <&kp RBKT>, <&kp PIPE>;
+            bindings = <&kp RBKT>, <&kp LA(PIPE)>;
         };
 
         brace: brace {
             compatible = "zmk,behavior-tap-dance";
             label = "BRACE";
             #binding-cells = <0>;
-            bindings = <&kp RBRC>, <&kp LA(PIPE)>;
+            bindings = <&kp RBRC>, <&kp PIPE>;
         };
     };
 
