@@ -88,7 +88,7 @@
             display-name = "NUMBER";
             bindings = <
 &kp TAB  &trans  &kp N9  &kp N8  &kp N7  &trans                          &kp HASH            &trans          &kp PG_DN       &kp PG_UP     &trans           &parenthesis  &kp LBKT
-&trans   &trans  &kp N6  &kp N5  &kp N4  &trans                  &kp N0  &trans    &kp DLLR  &mmv MOVE_LEFT  &mmv MOVE_DOWN  &mmv MOVE_UP  &mmv MOVE_RIGHT  &bracket      &kp EXCL
+&trans   &trans  &kp N6  &kp N5  &kp N4  &trans                  &kp N0  &trans    &kp DLLR  &mmv MOVE_LEFT  &mmv MOVE_DOWN  &mmv MOVE_UP  &mmv MOVE_RIGHT  &bracket      &kp SQT
 &trans   &trans  &kp N3  &kp N2  &kp N1  &kp N0        &trans            &kp STAR            &kp LEFT        &kp DOWN        &kp UP        &kp RIGHT        &brace        &kp MINUS
                          &trans  &trans  &trans                                              &kp RSHIFT      &none           &kp LALT
             >;
@@ -97,8 +97,8 @@
         raise_symbol {
             display-name = "SYMBOL";
             bindings = <
-&kp LA(TAB)   &trans  &trans  &trans  &trans  &trans                    &kp HASH            &kp KP_SLASH  &kp MINUS  &kp PLUS  &kp SQT    &kp EXCL   &kp LA(DELETE)
-&out OUT_BLE  &trans  &trans  &trans  &trans  &trans            &kp N0  &trans    &kp DLLR  &kp N0        &kp STAR   &kp HASH  &kp DLLR   &kp SQT    &kp GRAVE
+&kp LA(TAB)   &trans  &trans  &trans  &trans  &trans                    &kp HASH            &kp KP_SLASH  &kp MINUS  &kp PLUS  &kp PRCNT  &kp EXCL   &kp LA(DELETE)
+&out OUT_BLE  &trans  &trans  &trans  &trans  &trans            &kp N0  &trans    &kp DLLR  &kp N0        &kp STAR   &kp HASH  &kp DLLR   &none      &kp GRAVE
 &out OUT_USB  &trans  &trans  &trans  &trans  &trans  &trans            &kp STAR            &kp EQUAL     &kp AT     &kp EXCL  &kp RA(W)  &kp RA(W)  &kp AMPS
                               &trans  &none   &trans                                        &kp RET       &trans     &trans
             >;
