@@ -71,6 +71,35 @@
         tap-ms = <100>;
     };
 
+    combos {
+        compatible = "zmk,combos";
+
+        device1 {
+            bindings = <&bt BT_SEL 0>;
+            key-positions = <45 47 4>;
+        };
+
+        device2 {
+            bindings = <&bt BT_SEL 1>;
+            key-positions = <45 47 3>;
+        };
+
+        device3 {
+            bindings = <&bt BT_SEL 2>;
+            key-positions = <45 47 2>;
+        };
+
+        device4 {
+            bindings = <&bt BT_SEL 3>;
+            key-positions = <45 47 17>;
+        };
+
+        device5 {
+            bindings = <&bt BT_SEL 4>;
+            key-positions = <45 47 16>;
+        };
+    };
+
     keymap {
         compatible = "zmk,keymap";
 
@@ -87,10 +116,10 @@
         lower_numer {
             display-name = "NUMBER";
             bindings = <
-&kp TAB  &trans  &kp N9  &kp N8  &kp N7  &trans                          &kp HASH            &trans          &kp PG_DN       &kp PG_UP     &trans           &parenthesis  &kp LBKT
-&trans   &trans  &kp N6  &kp N5  &kp N4  &trans                  &kp N0  &trans    &kp DLLR  &mmv MOVE_LEFT  &mmv MOVE_DOWN  &mmv MOVE_UP  &mmv MOVE_RIGHT  &bracket      &kp SQT
-&trans   &trans  &kp N3  &kp N2  &kp N1  &kp N0        &trans            &kp STAR            &kp LEFT        &kp DOWN        &kp UP        &kp RIGHT        &brace        &kp MINUS
-                         &trans  &trans  &trans                                              &kp RSHIFT      &none           &kp LALT
+&kp TAB  &trans  &kp N9  &kp N8  &kp N7  &trans                    &kp HASH            &trans          &kp PG_DN       &kp PG_UP     &trans           &parenthesis  &kp LBKT
+&trans   &trans  &kp N6  &kp N5  &kp N4  &trans            &kp N0  &trans    &kp DLLR  &mmv MOVE_LEFT  &mmv MOVE_DOWN  &mmv MOVE_UP  &mmv MOVE_RIGHT  &bracket      &kp SQT
+&trans   &trans  &kp N3  &kp N2  &kp N1  &kp N0  &trans            &kp STAR            &kp LEFT        &kp DOWN        &kp UP        &kp RIGHT        &brace        &kp MINUS
+                         &trans  &trans  &trans                                        &kp RSHIFT      &none           &kp LALT
             >;
         };
 
@@ -107,10 +136,10 @@
         fn_layer {
             display-name = "FN";
             bindings = <
-&studio_unlock  &trans  &bt BT_SEL 2  &bt BT_SEL 1  &bt BT_SEL 0  &trans                             &rgb_ug RGB_BRI                   &kp F7  &kp F8  &kp F9  &kp F10  &trans  &trans
-&bootloader     &trans  &trans        &bt BT_SEL 4  &bt BT_SEL 3  &trans            &rgb_ug RGB_EFR  &rgb_ug RGB_TOG  &rgb_ug RGB_EFF  &kp F4  &kp F5  &kp F6  &kp F11  &trans  &bootloader
-&sys_reset      &trans  &trans        &trans        &trans        &trans  &trans                     &rgb_ug RGB_BRD                   &kp F1  &kp F2  &kp F3  &kp F12  &trans  &sys_reset
-                                      &trans        &trans        &trans                                                               &none   &trans  &kp RALT
+&studio_unlock  &trans  &none   &none   &none   &trans                             &rgb_ug RGB_BRI                   &kp F7  &kp F8  &kp F9    &kp F10  &trans  &trans
+&bootloader     &trans  &trans  &none   &none   &trans            &rgb_ug RGB_EFR  &rgb_ug RGB_TOG  &rgb_ug RGB_EFF  &kp F4  &kp F5  &kp F6    &kp F11  &trans  &bootloader
+&sys_reset      &trans  &trans  &trans  &trans  &trans  &trans                     &rgb_ug RGB_BRD                   &kp F1  &kp F2  &kp F3    &kp F12  &trans  &sys_reset
+                                &trans  &trans  &trans                                                               &none   &trans  &kp RALT
             >;
         };
 
