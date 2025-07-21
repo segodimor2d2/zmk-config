@@ -87,9 +87,9 @@
         lower_numer {
             display-name = "NUMBER";
             bindings = <
-&kp TAB  &trans  &kp N9  &kp N8  &kp N7  &trans                          &kp HASH            &trans          &kp PG_DN       &kp PG_UP     &trans           &kp EXCL   &kp LBKT
-&trans   &trans  &kp N6  &kp N5  &kp N4  &trans                  &kp N0  &trans    &kp DLLR  &mmv MOVE_LEFT  &mmv MOVE_DOWN  &mmv MOVE_UP  &mmv MOVE_RIGHT  &kp SQT    &kp EXCL
-&trans   &trans  &kp N3  &kp N2  &kp N1  &kp N0        &trans            &kp STAR            &kp LEFT        &kp DOWN        &kp UP        &kp RIGHT        &kp RA(W)  &kp MINUS
+&kp TAB  &trans  &kp N9  &kp N8  &kp N7  &trans                          &kp HASH            &trans          &kp PG_DN       &kp PG_UP     &trans           &parenthesis  &kp LBKT
+&trans   &trans  &kp N6  &kp N5  &kp N4  &trans                  &kp N0  &trans    &kp DLLR  &mmv MOVE_LEFT  &mmv MOVE_DOWN  &mmv MOVE_UP  &mmv MOVE_RIGHT  &bracket      &kp EXCL
+&trans   &trans  &kp N3  &kp N2  &kp N1  &kp N0        &trans            &kp STAR            &kp LEFT        &kp DOWN        &kp UP        &kp RIGHT        &brace        &kp MINUS
                          &trans  &trans  &trans                                              &kp RSHIFT      &none           &kp LALT
             >;
         };
@@ -97,10 +97,10 @@
         raise_symbol {
             display-name = "SYMBOL";
             bindings = <
-&kp LA(TAB)   &trans  &trans  &trans  &trans  &trans                    &kp HASH            &kp KP_SLASH  &kp MINUS  &kp PLUS  &kp SQT    &parenthesis  &kp LA(DELETE)
-&out OUT_BLE  &trans  &trans  &trans  &trans  &trans            &kp N0  &trans    &kp DLLR  &kp N0        &kp STAR   &kp HASH  &kp DLLR   &bracket      &kp GRAVE
-&out OUT_USB  &trans  &trans  &trans  &trans  &trans  &trans            &kp STAR            &kp EQUAL     &kp AT     &kp EXCL  &kp RA(W)  &brace        &kp AMPS
-                              &trans  &trans  &trans                                        &kp RET       &trans     &trans
+&kp LA(TAB)   &trans  &trans  &trans  &trans  &trans                    &kp HASH            &kp KP_SLASH  &kp MINUS  &kp PLUS  &kp SQT    &kp EXCL   &kp LA(DELETE)
+&out OUT_BLE  &trans  &trans  &trans  &trans  &trans            &kp N0  &trans    &kp DLLR  &kp N0        &kp STAR   &kp HASH  &kp DLLR   &kp SQT    &kp GRAVE
+&out OUT_USB  &trans  &trans  &trans  &trans  &trans  &trans            &kp STAR            &kp EQUAL     &kp AT     &kp EXCL  &kp RA(W)  &kp RA(W)  &kp AMPS
+                              &trans  &none   &trans                                        &kp RET       &trans     &trans
             >;
         };
 
@@ -110,7 +110,7 @@
 &studio_unlock  &trans  &bt BT_SEL 2  &bt BT_SEL 1  &bt BT_SEL 0  &trans                             &rgb_ug RGB_BRI                   &kp F7  &kp F8  &kp F9  &kp F10  &trans  &trans
 &bootloader     &trans  &trans        &bt BT_SEL 4  &bt BT_SEL 3  &trans            &rgb_ug RGB_EFR  &rgb_ug RGB_TOG  &rgb_ug RGB_EFF  &kp F4  &kp F5  &kp F6  &kp F11  &trans  &bootloader
 &sys_reset      &trans  &trans        &trans        &trans        &trans  &trans                     &rgb_ug RGB_BRD                   &kp F1  &kp F2  &kp F3  &kp F12  &trans  &sys_reset
-                                      &trans        &trans        &trans                                                               &trans  &trans  &kp RALT
+                                      &trans        &trans        &trans                                                               &none   &trans  &kp RALT
             >;
         };
 
@@ -119,7 +119,7 @@
 &trans      &trans  &trans  &trans        &trans        &trans                        &kp C_VOL_UP          &msc SCRL_LEFT  &msc SCRL_DOWN  &msc SCRL_UP  &msc SCRL_RIGHT  &trans  &trans
 &trans      &trans  &trans  &mkp MCLK     &mkp RCLK     &mkp LCLK             &trans  &kp C_MUTE    &trans  &mmv MOVE_LEFT  &mmv MOVE_DOWN  &mmv MOVE_UP  &mmv MOVE_RIGHT  &trans  &kp PG_UP
 &sys_reset  &trans  &trans  &kp C_VOL_DN  &kp C_VOL_UP  &kp C_MUTE  &trans            &kp C_VOL_DN          &kp LEFT_ARROW  &kp DOWN        &kp UP        &kp RIGHT        &trans  &kp PG_DN
-                            &trans        &trans        &trans                                              &trans          &trans          &trans
+                            &trans        &trans        &none                                               &trans          &trans          &trans
             >;
 
             label = "REC";
