@@ -76,27 +76,69 @@
 
         device1 {
             bindings = <&bt BT_SEL 0>;
-            key-positions = <45 47 4>;
+            key-positions = <4 44>;
+            layers = <3>;
         };
 
         device2 {
             bindings = <&bt BT_SEL 1>;
-            key-positions = <45 47 3>;
+            key-positions = <3 44>;
+            layers = <3>;
         };
 
         device3 {
             bindings = <&bt BT_SEL 2>;
-            key-positions = <45 47 2>;
+            key-positions = <2 44>;
+            layers = <3>;
         };
 
         device4 {
             bindings = <&bt BT_SEL 3>;
-            key-positions = <45 47 17>;
+            key-positions = <17 44>;
+            layers = <3>;
         };
 
         device5 {
             bindings = <&bt BT_SEL 4>;
-            key-positions = <45 47 16>;
+            key-positions = <16 44>;
+            layers = <3>;
+        };
+
+        lsysreset {
+            bindings = <&sys_reset>;
+            key-positions = <44 28>;
+        };
+
+        rsysreset {
+            bindings = <&sys_reset>;
+            key-positions = <45 41>;
+        };
+
+        lbootloader {
+            bindings = <&bootloader>;
+            key-positions = <44 13>;
+        };
+
+        rbootloader {
+            bindings = <&bootloader>;
+            key-positions = <27 45>;
+        };
+
+        sutudiounlock {
+            bindings = <&studio_unlock>;
+            key-positions = <44 0>;
+        };
+
+        outble {
+            bindings = <&out OUT_BLE>;
+            key-positions = <44 14>;
+            layers = <3>;
+        };
+
+        outusb {
+            bindings = <&out OUT_USB>;
+            key-positions = <44 29>;
+            layers = <3>;
         };
     };
 
@@ -106,49 +148,49 @@
         default_layer {
             display-name = "QWERTY";
             bindings = <
-&kp ESC    &kp Q  &kp W  &kp E     &kp R  &kp T                                  &mmv MOVE_UP                     &kp Y        &kp U  &kp I            &kp O    &kp P     &kp BSPC
-&kp LSHFT  &kp A  &kp S  &kp D     &kp F  &kp G                  &mmv MOVE_LEFT  &mkp LCLK       &mmv MOVE_RIGHT  &kp H        &kp J  &kp K            &kp L    &kp SEMI  &kp ENTER
-&kp LCTRL  &kp Z  &kp X  &kp C     &kp V  &kp B        &trans                    &mmv MOVE_DOWN                   &kp N        &kp M  &kp COMMA        &kp DOT  &kp FSLH  &kp RSHIFT
-                         &kp LALT  &mo 2  &lt 4 SPACE                                                             &lt 3 ENTER  &mo 1  &kp RIGHT_SHIFT
+&kp ESC    &kp Q  &kp W  &kp E     &kp R  &kp T                                 &mmv MOVE_UP                     &kp Y        &kp U  &kp I            &kp O    &kp P     &kp BSPC
+&kp LSHFT  &kp A  &kp S  &kp D     &kp F  &kp G                 &mmv MOVE_LEFT  &mkp LCLK       &mmv MOVE_RIGHT  &kp H        &kp J  &kp K            &kp L    &kp SEMI  &kp ENTER
+&kp LCTRL  &kp Z  &kp X  &kp C     &kp V  &kp B        &none                    &mmv MOVE_DOWN                   &kp N        &kp M  &kp COMMA        &kp DOT  &kp FSLH  &kp RSHIFT
+                         &kp LALT  &mo 2  &lt 4 SPACE                                                            &lt 3 ENTER  &mo 1  &kp RIGHT_SHIFT
             >;
         };
 
         lower_numer {
             display-name = "NUMBER";
             bindings = <
-&kp TAB  &trans  &kp N9  &kp N8  &kp N7  &trans                    &kp HASH            &trans          &kp PG_DN       &kp PG_UP     &trans           &parenthesis  &kp LBKT
-&trans   &trans  &kp N6  &kp N5  &kp N4  &trans            &kp N0  &trans    &kp DLLR  &mmv MOVE_LEFT  &mmv MOVE_DOWN  &mmv MOVE_UP  &mmv MOVE_RIGHT  &bracket      &kp SQT
-&trans   &trans  &kp N3  &kp N2  &kp N1  &kp N0  &trans            &kp STAR            &kp LEFT        &kp DOWN        &kp UP        &kp RIGHT        &brace        &kp MINUS
-                         &trans  &trans  &trans                                        &kp RSHIFT      &none           &kp LALT
+&kp TAB  &none  &kp N9  &kp N8  &kp N7  &none                    &kp HASH            &kp HOME        &kp PG_DN       &kp PG_UP     &kp END          &parenthesis  &kp LBKT
+&trans   &none  &kp N6  &kp N5  &kp N4  &none            &kp N0  &none     &kp DLLR  &mmv MOVE_LEFT  &mmv MOVE_DOWN  &mmv MOVE_UP  &mmv MOVE_RIGHT  &bracket      &kp SQT
+&trans   &none  &kp N3  &kp N2  &kp N1  &kp N0  &none            &kp STAR            &kp LEFT        &kp DOWN        &kp UP        &kp RIGHT        &brace        &kp MINUS
+                        &none   &none   &none                                        &kp RSHIFT      &none           &kp LALT
             >;
         };
 
         raise_symbol {
             display-name = "SYMBOL";
             bindings = <
-&kp LA(TAB)   &trans  &trans  &trans  &trans  &trans                    &kp HASH            &kp KP_SLASH  &kp MINUS  &kp PLUS  &kp PRCNT  &kp EXCL   &kp LA(DELETE)
-&out OUT_BLE  &trans  &trans  &trans  &trans  &trans            &kp N0  &trans    &kp DLLR  &kp N0        &kp STAR   &kp HASH  &kp DLLR   &none      &kp GRAVE
-&out OUT_USB  &trans  &trans  &trans  &trans  &trans  &trans            &kp STAR            &kp EQUAL     &kp AT     &kp EXCL  &kp RA(W)  &kp RA(W)  &kp AMPS
-                              &trans  &none   &trans                                        &kp RET       &trans     &trans
+&kp LA(TAB)  &trans  &trans  &trans  &trans  &trans                    &kp HASH            &kp BSLH   &kp MINUS  &kp PLUS  &kp PRCNT  &kp EXCL       &kp LA(DELETE)
+&trans       &trans  &trans  &trans  &trans  &trans            &kp N0  &trans    &kp DLLR  &kp N0     &kp STAR   &kp HASH  &kp DLLR   &kp KP_DIVIDE  &kp GRAVE
+&trans       &trans  &trans  &trans  &trans  &trans  &trans            &kp STAR            &kp EQUAL  &kp AT     &kp EXCL  &kp RA(W)  &kp RA(W)      &kp AMPS
+                             &trans  &none   &trans                                        &kp RET    &trans     &trans
             >;
         };
 
         fn_layer {
             display-name = "FN";
             bindings = <
-&studio_unlock  &trans  &none   &none   &none   &trans                             &rgb_ug RGB_BRI                   &kp F7  &kp F8  &kp F9    &kp F10  &trans  &trans
-&bootloader     &trans  &trans  &none   &none   &trans            &rgb_ug RGB_EFR  &rgb_ug RGB_TOG  &rgb_ug RGB_EFF  &kp F4  &kp F5  &kp F6    &kp F11  &trans  &bootloader
-&sys_reset      &trans  &trans  &trans  &trans  &trans  &trans                     &rgb_ug RGB_BRD                   &kp F1  &kp F2  &kp F3    &kp F12  &trans  &sys_reset
-                                &trans  &trans  &trans                                                               &none   &trans  &kp RALT
+&none  &none  &none  &none  &none  &none                            &rgb_ug RGB_BRI                   &kp F7  &kp F8  &kp F9    &kp F10  &none  &none
+&none  &none  &none  &none  &none  &none           &rgb_ug RGB_EFR  &rgb_ug RGB_TOG  &rgb_ug RGB_EFF  &kp F4  &kp F5  &kp F6    &kp F11  &none  &none
+&none  &none  &none  &none  &none  &none  &none                     &rgb_ug RGB_BRD                   &kp F1  &kp F2  &kp F3    &kp F12  &none  &none
+                     &none  &none  &none                                                              &none   &none   &kp RALT
             >;
         };
 
         rec_layer {
             bindings = <
-&trans      &trans  &trans  &trans        &trans        &trans                        &kp C_VOL_UP          &msc SCRL_LEFT  &msc SCRL_DOWN  &msc SCRL_UP  &msc SCRL_RIGHT  &trans  &trans
-&trans      &trans  &trans  &mkp MCLK     &mkp RCLK     &mkp LCLK             &trans  &kp C_MUTE    &trans  &mmv MOVE_LEFT  &mmv MOVE_DOWN  &mmv MOVE_UP  &mmv MOVE_RIGHT  &trans  &kp PG_UP
-&sys_reset  &trans  &trans  &kp C_VOL_DN  &kp C_VOL_UP  &kp C_MUTE  &trans            &kp C_VOL_DN          &kp LEFT_ARROW  &kp DOWN        &kp UP        &kp RIGHT        &trans  &kp PG_DN
-                            &trans        &trans        &none                                               &trans          &trans          &trans
+&trans  &trans  &trans  &trans        &trans        &trans                        &kp C_VOL_UP          &msc SCRL_LEFT  &msc SCRL_DOWN  &msc SCRL_UP  &msc SCRL_RIGHT  &trans  &trans
+&trans  &trans  &trans  &mkp MCLK     &mkp RCLK     &mkp LCLK             &trans  &kp C_MUTE    &trans  &mmv MOVE_LEFT  &mmv MOVE_DOWN  &mmv MOVE_UP  &mmv MOVE_RIGHT  &trans  &kp PG_UP
+&none   &trans  &trans  &kp C_VOL_DN  &kp C_VOL_UP  &kp C_MUTE  &trans            &kp C_VOL_DN          &kp LEFT_ARROW  &kp DOWN        &kp UP        &kp RIGHT        &trans  &kp PG_DN
+                        &trans        &trans        &none                                               &trans          &trans          &trans
             >;
 
             label = "REC";
