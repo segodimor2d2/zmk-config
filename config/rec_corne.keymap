@@ -168,10 +168,10 @@
         raise_symbol {
             display-name = "SYMBOL";
             bindings = <
-&kp LA(TAB)  &trans  &trans  &trans  &trans  &trans                    &kp HASH            &kp BSLH   &kp MINUS  &kp PLUS  &kp PRCNT  &kp EXCL       &kp LA(DELETE)
-&trans       &trans  &trans  &trans  &trans  &trans            &kp N0  &trans    &kp DLLR  &kp N0     &kp STAR   &kp HASH  &kp DLLR   &kp RA(W)      &kp GRAVE
-&trans       &trans  &trans  &trans  &trans  &trans  &trans            &kp STAR            &kp EQUAL  &kp AT     &kp EXCL  &kp RA(W)  &kp KP_DIVIDE  &kp AMPS
-                             &trans  &none   &trans                                        &kp RET    &trans     &trans
+&kp LA(TAB)  &trans  &trans  &trans  &trans  &trans                    &kp HASH            &kp RA(UNDERSCORE)  &kp MINUS  &kp PLUS  &kp PRCNT  &kp EXCL       &kp LA(DELETE)
+&trans       &trans  &trans  &trans  &trans  &trans            &kp N0  &trans    &kp DLLR  &kp N0              &kp STAR   &kp HASH  &kp DLLR   &kp RA(W)      &kp GRAVE
+&trans       &trans  &trans  &trans  &trans  &trans  &trans            &kp STAR            &kp EQUAL           &kp AT     &kp EXCL  &kp RA(W)  &kp KP_DIVIDE  &kp AMPS
+                             &trans  &none   &trans                                        &kp RET             &trans     &trans
             >;
         };
 
@@ -187,10 +187,10 @@
 
         rec_layer {
             bindings = <
-&trans  &trans  &trans     &trans        &trans        &trans                        &kp C_VOL_UP          &msc SCRL_LEFT  &msc SCRL_DOWN  &msc SCRL_UP  &msc SCRL_RIGHT  &trans  &trans
-&trans  &trans  &mkp MCLK  &mkp RCLK     &mkp LCLK     &trans                &trans  &kp C_MUTE    &trans  &mmv MOVE_LEFT  &mmv MOVE_DOWN  &mmv MOVE_UP  &mmv MOVE_RIGHT  &trans  &kp PG_UP
-&none   &trans  &kp C_MUTE &kp C_VOL_DN  &kp C_VOL_UP  &trans      &trans            &kp C_VOL_DN          &kp LEFT_ARROW  &kp DOWN        &kp UP        &kp RIGHT        &trans  &kp PG_DN
-                           &trans        &trans        &none                                               &trans          &trans          &trans
+&trans  &trans  &trans      &trans        &trans        &trans                    &kp C_VOL_UP          &msc SCRL_LEFT  &msc SCRL_DOWN  &msc SCRL_UP  &msc SCRL_RIGHT  &trans  &trans
+&trans  &trans  &mkp MCLK   &mkp RCLK     &mkp LCLK     &trans            &trans  &kp C_MUTE    &trans  &mmv MOVE_LEFT  &mmv MOVE_DOWN  &mmv MOVE_UP  &mmv MOVE_RIGHT  &trans  &kp PG_UP
+&none   &trans  &kp C_MUTE  &kp C_VOL_DN  &kp C_VOL_UP  &trans  &trans            &kp C_VOL_DN          &kp LEFT_ARROW  &kp DOWN        &kp UP        &kp RIGHT        &trans  &kp PG_DN
+                            &trans        &trans        &none                                           &trans          &trans          &trans
             >;
 
             label = "REC";
