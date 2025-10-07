@@ -158,10 +158,10 @@
         lower_numer {
             display-name = "NUMBER";
             bindings = <
-&kp TAB  &none  &kp N9  &kp N8  &kp N7  &none                    &kp HASH            &kp HOME        &kp PG_DN       &kp PG_UP     &kp END          &parenthesis  &kp LBKT
-&trans   &none  &kp N6  &kp N5  &kp N4  &none            &kp N0  &none     &kp DLLR  &mmv MOVE_LEFT  &mmv MOVE_DOWN  &mmv MOVE_UP  &mmv MOVE_RIGHT  &bracket      &kp SQT
-&trans   &none  &kp N3  &kp N2  &kp N1  &kp N0  &none            &kp STAR            &kp LEFT        &kp DOWN        &kp UP        &kp RIGHT        &brace        &kp MINUS
-                        &none   &none   &none                                        &kp RSHIFT      &none           &kp LALT
+&kp TAB     &none  &kp N9  &kp N8  &kp N7  &none                    &kp HASH            &kp HOME        &kp PG_DN       &kp PG_UP     &kp END          &parenthesis  &kp LBKT
+&kp LSHFT   &none  &kp N6  &kp N5  &kp N4  &none            &kp N0  &none     &kp DLLR  &mmv MOVE_LEFT  &mmv MOVE_DOWN  &mmv MOVE_UP  &mmv MOVE_RIGHT  &bracket      &kp SQT
+&kp LCTRL   &none  &kp N3  &kp N2  &kp N1  &kp N0  &none            &kp STAR            &kp LEFT        &kp DOWN        &kp UP        &kp RIGHT        &brace        &kp MINUS
+                           &none   &none   &none                                        &kp RSHIFT      &none           &kp LALT
             >;
         };
 
@@ -169,8 +169,8 @@
             display-name = "SYMBOL";
             bindings = <
 &kp LA(TAB)  &trans  &trans  &trans  &trans  &trans                    &kp HASH            &kp RA(UNDERSCORE)  &kp MINUS  &kp PLUS  &kp PRCNT  &kp EXCL       &kp LA(DELETE)
-&trans       &trans  &trans  &trans  &trans  &trans            &kp N0  &trans    &kp DLLR  &kp N0              &kp STAR   &kp HASH  &kp DLLR   &kp RA(W)      &kp GRAVE
-&trans       &trans  &trans  &trans  &trans  &trans  &trans            &kp STAR            &kp EQUAL           &kp AT     &kp EXCL  &kp RA(W)  &kp KP_DIVIDE  &kp AMPS
+&kp LSHFT    &trans  &trans  &trans  &trans  &trans            &kp N0  &trans    &kp DLLR  &kp N0              &kp STAR   &kp HASH  &kp DLLR   &kp RA(W)      &kp GRAVE
+&kp LCTRL    &trans  &trans  &trans  &trans  &trans  &trans            &kp STAR            &kp EQUAL           &kp AT     &kp EXCL  &kp RA(W)  &kp KP_DIVIDE  &kp AMPS
                              &trans  &none   &trans                                        &kp RET             &trans     &trans
             >;
         };
