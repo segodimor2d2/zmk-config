@@ -168,10 +168,10 @@
         raise_symbol {
             display-name = "SYMBOL";
             bindings = <
-&kp LA(TAB)  &trans  &trans  &trans  &trans  &trans                    &kp HASH            &kp RA(UNDERSCORE)  &kp MINUS  &kp PLUS  &kp PRCNT  &parenthesis  &kp LA(DELETE)
-&kp LSHFT    &trans  &trans  &trans  &trans  &trans            &kp N0  &trans    &kp DLLR  &kp N0              &kp STAR   &kp HASH  &kp DLLR   &bracket      &kp GRAVE
-&kp LCTRL    &trans  &trans  &trans  &trans  &trans  &trans            &kp STAR            &kp EQUAL           &kp AT     &kp EXCL  &kp RA(W)  &brace        &kp AMPS
-                             &trans  &none   &trans                                        &kp RET             &trans     &trans
+&kp LA(TAB)  &trans  &trans  &trans  &trans  &trans                    &kp HASH            &kp RA(UNDER)  &kp MINUS  &kp PLUS  &kp PRCNT  &parenthesis  &kp LA(DELETE)
+&kp LSHFT    &trans  &trans  &trans  &trans  &trans            &kp N0  &trans    &kp DLLR  &kp N0         &kp STAR   &kp HASH  &kp DLLR   &bracket      &kp GRAVE
+&kp LCTRL    &trans  &trans  &trans  &trans  &trans  &trans            &kp STAR            &kp EQUAL      &kp AT     &kp EXCL  &kp RA(W)  &brace        &kp AMPS
+                             &trans  &none   &trans                                        &kp RET        &trans     &trans
             >;
         };
 
