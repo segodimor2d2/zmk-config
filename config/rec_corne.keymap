@@ -158,20 +158,20 @@
         lower_numer {
             display-name = "NUMBER";
             bindings = <
-&kp TAB    &none  &kp N9  &kp N8  &kp N7  &none                    &kp HOME            &kp LS(LEFT_BRACE)  &kp PG_DN       &kp PG_UP     &kp RA(UNDERSCORE)  &kp EXCL       &kp LBKT
-&kp LSHFT  &none  &kp N6  &kp N5  &kp N4  &kp N0           &kp N0  &kp ESC   &kp DLLR  &mmv MOVE_LEFT      &mmv MOVE_DOWN  &mmv MOVE_UP  &mmv MOVE_RIGHT     &kp RA(W)      &kp SQT
-&kp LCTRL  &none  &kp N3  &kp N2  &kp N1  &kp N0  &none            &kp END             &kp LEFT            &kp DOWN        &kp UP        &kp RIGHT           &kp KP_DIVIDE  &kp MINUS
-                          &none   &none   &none                                        &kp RSHIFT          &none           &kp LALT
+&kp TAB    &none      &kp N9  &kp N8  &kp N7  &none                          &kp HOME            &kp LS(LEFT_BRACE)  &kp PG_DN       &kp PG_UP     &kp RA(UNDERSCORE)  &kp EXCL       &kp LBKT
+&kp LSHFT  &kp EQUAL  &kp N6  &kp N5  &kp N4  &kp N0                 &kp N0  &kp ESC   &kp DLLR  &mmv MOVE_LEFT      &mmv MOVE_DOWN  &mmv MOVE_UP  &mmv MOVE_RIGHT     &kp RA(W)      &kp SQT
+&kp LCTRL  &none      &kp N3  &kp N2  &kp N1  &kp N0        &none            &kp END             &kp LEFT            &kp DOWN        &kp UP        &kp RIGHT           &kp KP_DIVIDE  &kp MINUS
+                              &none   &none   &kp LEFT_ALT                                       &kp SPACE           &none           &mkp LCLK
             >;
         };
 
         raise_symbol {
             display-name = "SYMBOL";
             bindings = <
-&kp LA(TAB)  &trans  &trans  &trans  &trans  &trans                    &kp HOME            &kp RA(UNDERSCORE)  &kp MINUS  &kp PLUS  &kp PRCNT  &parenthesis  &kp DELETE
-&kp LSHFT    &trans  &trans  &trans  &trans  &trans            &kp N0  &trans    &kp DLLR  &kp N0              &kp STAR   &kp HASH  &kp DLLR   &bracket      &kp GRAVE
-&kp LCTRL    &trans  &trans  &trans  &trans  &trans  &trans            &kp END             &kp EQUAL           &kp AT     &kp EXCL  &kp RA(W)  &brace        &kp AMPS
-                             &trans  &none   &trans                                        &kp RET             &trans     &trans
+&kp LA(TAB)  &trans  &kp LC(HOME)  &kp HOME  &kp END  &kp LC(END)                    &kp HOME            &kp RA(UNDERSCORE)  &kp MINUS  &kp PLUS  &kp PRCNT  &parenthesis  &kp DELETE
+&kp LSHFT    &trans  &trans        &trans    &trans   &trans                 &kp N0  &trans    &kp DLLR  &kp N0              &kp STAR   &kp HASH  &kp DLLR   &bracket      &kp GRAVE
+&kp LCTRL    &trans  &trans        &trans    &trans   &trans       &trans            &kp END             &kp EQUAL           &kp AT     &kp EXCL  &kp RA(W)  &brace        &kp AMPS
+                                   &trans    &none    &trans                                             &kp RET             &trans     &trans
             >;
         };
 
