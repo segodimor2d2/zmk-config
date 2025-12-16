@@ -76,31 +76,31 @@
 
         device1 {
             bindings = <&bt BT_SEL 0>;
-            key-positions = <4 44>;
+            key-positions = <44 18>;
             layers = <3>;
         };
 
         device2 {
             bindings = <&bt BT_SEL 1>;
-            key-positions = <3 44>;
+            key-positions = <44 32>;
             layers = <3>;
         };
 
         device3 {
             bindings = <&bt BT_SEL 2>;
-            key-positions = <2 44>;
+            key-positions = <44 31>;
             layers = <3>;
         };
 
         device4 {
             bindings = <&bt BT_SEL 3>;
-            key-positions = <17 44>;
+            key-positions = <44 31>;
             layers = <3>;
         };
 
         device5 {
             bindings = <&bt BT_SEL 4>;
-            key-positions = <16 44>;
+            key-positions = <44 17>;
             layers = <3>;
         };
 
@@ -158,9 +158,9 @@
         lower_numer {
             display-name = "NUMBER";
             bindings = <
-&kp TAB    &none      &kp N9  &kp N8  &kp N7  &none                          &kp HOME            &kp LS(LEFT_BRACE)  &kp PG_DN       &kp PG_UP     &kp NON_US_BACKSLASH  &kp EXCL       &kp LBKT
+&kp TAB    &kp PLUS   &kp N9  &kp N8  &kp N7  &none                          &kp HOME            &kp LS(LEFT_BRACE)  &kp PG_DN       &kp PG_UP     &kp NON_US_BACKSLASH  &kp EXCL       &kp LBKT
 &kp LSHFT  &kp EQUAL  &kp N6  &kp N5  &kp N4  &kp N0                 &kp N0  &kp ESC   &kp DLLR  &mmv MOVE_LEFT      &mmv MOVE_DOWN  &mmv MOVE_UP  &mmv MOVE_RIGHT       &kp RA(W)      &kp SQT
-&kp LCTRL  &none      &kp N3  &kp N2  &kp N1  &kp N0        &none            &kp END             &kp LEFT            &kp DOWN        &kp UP        &kp RIGHT             &kp KP_DIVIDE  &kp MINUS
+&kp LCTRL  &kp MINUS  &kp N3  &kp N2  &kp N1  &kp N0        &none            &kp END             &kp LEFT            &kp DOWN        &kp UP        &kp RIGHT             &kp KP_DIVIDE  &kp MINUS
                               &none   &none   &kp LEFT_ALT                                       &kp SPACE           &none           &mkp LCLK
             >;
         };
@@ -194,6 +194,5 @@
                             &trans        &trans        &none                                           &trans          &trans          &trans
             >;
         };
-
     };
 };
